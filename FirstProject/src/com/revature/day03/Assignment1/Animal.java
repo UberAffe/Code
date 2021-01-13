@@ -1,11 +1,11 @@
 package com.revature.day03.Assignment1;
 
 public abstract class Animal {
-	private String picture;
-	private String food;
-	private int hunger;
-	private int[] boundaries;
-	private String location;
+	protected String picture;
+	protected String food;
+	protected int hunger;
+	protected int[] boundaries;
+	protected String location;
 	
 	public abstract void makeNoise();
 	public abstract void eat();
