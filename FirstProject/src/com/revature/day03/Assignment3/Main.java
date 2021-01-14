@@ -7,7 +7,7 @@ import java.io.ObjectOutputStream;
 
 public class Main {
 	public static void main(String[] args) {
-		Employee []emps = {new Employee(), new Employee(), new Employee()};
+		Employee []emps = {new Employee("First"), new Employee("Second"), new Employee("Third")};
 		try {
 			FileOutputStream fos = new FileOutputStream("serial.dat");
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -30,7 +30,7 @@ public class Main {
 			ois.close();
 			int temp = 1;
 			for(Employee emp:emps2) {
-				System.out.println("object"+ temp++ +": " + emp);
+				System.out.println("object"+ temp++ +": " + emp.getName());
 			}
 		}
 		catch(Exception e) {
