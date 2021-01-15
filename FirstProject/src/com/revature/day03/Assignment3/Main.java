@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 public class Main {
 	public static void main(String[] args) {
@@ -37,5 +38,11 @@ public class Main {
 			System.out.println("Exception during deserialization: " + e);
 			System.exit(0);
 		}
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		for(int i = 1; i<=5; i++) {
+			al.add(i);
+		}
+		al.add(1, 6);
+		System.out.println(al);
 	}
 }
